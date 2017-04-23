@@ -12,6 +12,13 @@ Rails.application.routes.draw do
       end
     end
 
+#//---------定制devise的注册，增加注册的user栏，之后创建controller
+    namespace :account do
+  resources :users
+end
+#//----------------
+
+
     resources :jobs do
      resources :resumes
    end
