@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>电影制作招聘网站</title>
-        <%= csrf_meta_tags %>
+<head>
+  <title>电影制作招聘网站</title>
+  <%= csrf_meta_tags %>
 
-        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-    <body>
+<body>
+  <%= render "common/flashes" %>
+  <div class="container-fluid">
+    <div class="row">
+      <%= render "common/navbar" %>
+      <%= yield %>
+    </div>
+  </div>
 
-        <div class="container-fluid">
-            <div class="row">
-              <%= render "common/navbar" %>
-</div>
-            <%= render "common/flashes" %>
-
-            <%= yield %>
-        </div>
-
-        <%= render "common/footer" %>
-
-    </body>
+  <%= render "common/footer" %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  
+</body>
 </html>
 <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
- <link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="shortcut icon" href="/images/favicon.ico">
