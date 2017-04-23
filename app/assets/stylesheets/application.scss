@@ -13,10 +13,13 @@
  *= require_tree .
  *= require_self
  *= require font-awesome
+ *= require 'masonry/transitions'
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "font-awesome";
+
+
 
   //---------设置注册弹窗样式---------
  @import url(http://fonts.googleapis.com/css?family=Roboto);
@@ -132,7 +135,7 @@
   //---------Navbar---------
 
   .navbar-default {
-      background-color: #293440;//导航条
+      background-color: #233140;//导航条
       border-color: #293440;
       margin-bottom: 0;//这样就可以紧接息面的描述文字
       border-radius: 0;
@@ -186,13 +189,22 @@
      z-index: -100;
    }
 
+   //---------Box2---------
+
+   .box2 {
+            background-image: image-url("zhuo6.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-bottom: 20px;
+
+}
   //---------Box---------
 
   .box {
-           background-image: image-url("film-making.jpg");
-           background-repeat: no-repeat;
-           background-size: cover;
-           margin-bottom: 20px;
+    background-image: image-url("zhuo10.jpg");
+         background-repeat: no-repeat;
+         background-size: cover;
+         margin-bottom: 50px;
 
 
 
@@ -201,6 +213,7 @@
           padding-bottom: 5px;
           margin-top: 250px;
           margin-bottom: 30px;
+
       }
 
       .title {
@@ -208,40 +221,44 @@
           margin-bottom: 20px;
       }
 
-      .slogan {
-          color: #222;
+      .slogan { //标语
+          color: #DC912B;
           margin-top: 10px;
           margin-bottom: 50px;
           text-align: left;
-          font-size: 25px;
+          font-size: 500px;
           top: 12px;
       }
 
       .lead {
+        right: 0;
+        bottom: 0;
           margin-bottom: 60px;
           text-align: left;
           color: white;
       }
   }
 
-   //---------Content---------
+   //---------Content（三个图片文字部分）---------
 
    .content-section-a {
-     background-color: #ffffff;
-       padding: 20px 0;//填充文字区的高度
+
+       padding: 50px 0;//填充文字区的高度
        background-color: #f8f8f8;
    }
 
    .content-section-b {
+
+     background-color: #ffffff;
        padding: 50px 0;
-       border-top: 1px solid #e7e7e7;
-       border-bottom: 1px solid #e7e7e7;
+       border-top: 1px solid #e7e7e7;//框边上
+       border-bottom: 1px solid #e7e7e7;//框边下
    }
 
    .section-heading-spacer {
        float: left;
        width: 200px;
-       border-top: 3px solid #e7e7e7;
+       border-top: 0px solid #e7e7e7;
    }
 
    .section-heading {
@@ -249,6 +266,8 @@
    }
 
    .lead {
+     right: 0;
+     bottom: 0;
        font-size: 18px;
        font-weight: 400;
    }
